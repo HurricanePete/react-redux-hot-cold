@@ -12,5 +12,5 @@ describe('<InfoModal />', () => {
 		const wrapper = mount(<InfoModal onClose={callback}/>);
 		wrapper.find('a').simulate('click');
 		expect(callback).toHaveBeenCalled();
-	})
+	});
 });
