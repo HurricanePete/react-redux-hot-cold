@@ -17,8 +17,8 @@ export default class GuessForm extends React.Component {
         return (
             <form onSubmit={e => this.onGuess(e)}>
                 <label htmlFor="userGuess">Enter your Guess</label>
-                <input type="text" name="userGuess" id="userGuess"
-                    className="text" maxLength="3" autoComplete="off"
+                <input type="number" name="userGuess" id="userGuess"
+                    className="text" maxLength="3" min="1" max="100" autoComplete="off"
                     placeholder={Math.round(Math.random() * 100)} required
                     ref={input => this.input = input} />
                 <input type="submit" id="guessButton" className="button" name="submit" value="Guess"/>
